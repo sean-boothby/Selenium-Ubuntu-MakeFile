@@ -1,5 +1,5 @@
 #!/bin/bash
-
+site=$1
 # MAKEFILE for MLAS-Automator
 
 # Covers dependencies for all scripts to run
@@ -18,9 +18,17 @@ sudo pip3 install pyyaml==3.13
 echo Grabbing needed python packages for MLAS-Auto
 
 # Create directories and grab the MLAS-Automator
-echo Creating local MLAS-Auto environment
+echo Creating local environment for your selenium script
 
-sudo mkdir /MLAS-Automator && sudo chown $USER:data /MLAS-Automator && cd /MLAS-Automator
-git clone https://github.com/sean-boothby/MLAS-Automator.git
-cd MLAS-Automator
-sudo mkdir downloads
+
+if [[ $site =~ MLAS ]];
+then
+	sudo mkdir /MLAS-Automator && sudo chown $USER:data /MLAS-Automator && cd /MLAS-Automator
+	git clone $site
+	cd MLAS-Automator
+	sudo mkdir downloads
+else
+	git clone $site
+fi
+
+
