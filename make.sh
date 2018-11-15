@@ -7,15 +7,17 @@ site=$1
 
 
 # install deps
-sudo apt-get install -y python3 python3-pip
-echo Installing MLAS-Auto key deps.
+sudo apt-get install -y python3 python3-pip libxss1 libappindicator1 libindicator7
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome*.deb
+echo Installing selenium ubuntu key deps
 
 
 # install python packages needed
 sudo pip3 install selenium==3.14.1
 sudo pip3 install pandas==0.23.4
 sudo pip3 install pyyaml==3.13
-echo Grabbing needed python packages for MLAS-Auto
+echo Grabbing needed python packages - selenium and a few others
 
 # Create directories and grab the MLAS-Automator
 echo Creating local environment for your selenium script
