@@ -25,7 +25,7 @@ echo Creating local environment for your selenium script
 
 if [[ $site =~ MLAS ]];
 then
-	sudo mkdir /MLAS-Automator && sudo chown $USER:data /MLAS-Automator && cd /MLAS-Automator
+	sudo mkdir /MLAS && sudo chown $USER:data /MLAS && cd /MLAS
 	git clone $site
 	cd MLAS-Automator
 	sudo mkdir downloads
