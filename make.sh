@@ -29,8 +29,10 @@ then
 	git clone $site
 	cd MLAS-Automator
 	sudo mkdir downloads
+	chmod +x driver/chromedriver
 else
 	git clone $site
+	chmod +x driver/chromedriver
 fi
 
 
