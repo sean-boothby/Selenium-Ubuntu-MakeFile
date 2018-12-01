@@ -31,7 +31,7 @@ then
 	sudo mkdir downloads
 	chmod +x driver/chromedriver
 else
-	sudo mkdir /blmAuto && sudo chown $USER:data /blmAuto && cd /blmAuto
+	sudo mkdir /blmautotwo && sudo chown $USER:data /blmautotwo && cd /blmautotwo
 	git clone $site
 	cd blmauto*
 	sudo mkdir downloads
